@@ -1,0 +1,20 @@
+﻿@model first_project.Models.UserViewModel
+@{
+    Layout = null;
+}
+
+<link rel="stylesheet" href="~/css/login.css" rel="stylesheet" />
+
+<section>
+    <h1>Autenticação</h1>
+    <form action="/Login/Test" method="post">
+        <input type="text" name="email" value="@Model.Email" placeholder="Username/e-mail" />
+        <input type="password" name="password" value="@Model.Password" placeholder="Senha " />
+        <a href="#">Esqueceu a senha?</a>
+
+        <button>Login</button>
+    </form>
+
+    <label>Não tem conta? <a href="#">Clique aqui</a></label>
+
+</section>
