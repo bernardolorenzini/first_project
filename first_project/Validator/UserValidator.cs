@@ -10,9 +10,10 @@ namespace first_project.Validator
 
 		public UserValidator()
 		{
-			RuleFor(user => user.Email).NotNull();
-			RuleFor(user => user.Username).NotNull();
-            RuleFor(user => user.Password).NotNull();
+			RuleFor(user => user.Email).NotNull().WithMessage("Email vazio");
+			RuleFor(user => user.Email).EmailAddress().WithMessage("O e-mail esta inválido");
+			RuleFor(user => user.Username).NotNull().WithMessage("Sem username");
+            RuleFor(user => user.Password).NotNull().WithMessage("Sem senha");
 
 		}
 

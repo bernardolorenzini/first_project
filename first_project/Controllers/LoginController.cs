@@ -20,6 +20,8 @@ namespace first_project.Controllers
         public IActionResult Index()
         {
             UserViewModel user = new UserViewModel();
+            user.Email = user.Email;
+
             UserValidator validator = new UserValidator();
 
             FluentValidation.Results.ValidationResult results = validator.Validate(user);
@@ -28,7 +30,7 @@ namespace first_project.Controllers
             {
                 foreach(var failure in results.Errors)
                 {
-                    Console.WriteLine("Property " + failure.PropertyName);
+                    Console.WriteLine("Property " + failure.PropertyName + " failed validation. Error was: " + failure.ErrorMessage);
                 }
             }
             
