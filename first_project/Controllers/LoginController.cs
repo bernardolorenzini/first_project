@@ -20,11 +20,14 @@ namespace first_project.Controllers
         public IActionResult Index()
         {
             UserViewModel user = new UserViewModel();
-            user.Email = user.Email;
+            user.Email = "sdffslknll";
+            user.Password = "234234";
+
 
             UserValidator validator = new UserValidator();
 
             FluentValidation.Results.ValidationResult results = validator.Validate(user);
+
 
             if (!results.IsValid)
             {

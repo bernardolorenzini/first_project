@@ -11,15 +11,17 @@
 form {
     display: flex;
     flex-direction: column;
+
 }
     form a {
         text-align: right;
     }
 
-input {
+/*input {
     margin-top: 20px;
 
-}
+}*/
+
 
 button{
     margin: 20px 0;
@@ -32,4 +34,40 @@ button{
 
 label{
     margin-bottom: 30px;
+}
+
+input {
+    border-bottom: 2px solid rgb(49, 47, 47);
+    padding: 10px;
+    font-size: .9rem;
+    margin-bottom: 40px;
+}
+
+    input:focus {
+        border-color: rgb(255, 72, 0);
+    }
+
+    input[type = "submit"] {
+        background-color: rgb(255, 72, 0);
+        color: white;
+        border: none;
+        border-radius: 40px;
+        cursor: pointer;
+    }
+
+#confirm {
+    margin-right: 5px;
+}
+
+#confirm, #confirm_label {
+    display: inline-block;
+    width: auto;
+}
+
+/* validacoes de erros*/
+.error_validation {
+    color: rgb(255, 72, 0);
+    position: absolute;
+    top: 57px;
+    font-size: 12px;
 }

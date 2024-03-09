@@ -1,0 +1,43 @@
+﻿@model first_project.Models.UserViewModel
+@{
+    Layout = null;
+}
+
+<link rel="stylesheet" href="~/css/cadastro.css" />
+
+
+<div id="main">
+    <h1>Cadastro de Clientes</h1>
+
+    <form id="register_form" action=''>
+        <div class="full_box">
+            <label for="emial">E-mail</label>
+            <input type="email" name="email" id="email" placeholder="E-mail" data-min-length="5">
+        </div>
+        <div class="half_box spacing">
+            <label for="name">Nome</label>
+            <input type="text" name="name" id="name" placeholder="Nome">
+        </div>
+        <div class="half_box">
+            <label for="lastname">Sobrenome</label>
+            <input type="text" name="lastname" id="lastname" placeholder="Sobrenome">
+        </div>
+        <div class="half_box spacing">
+            <label for="cpf">CPF</label>
+            <input type="text" name="cpf" id="cpf" placeholder="CPF">
+        </div>
+        <div class="half_box spacing">
+            <label for="cpf">CPF</label>
+            <input type="text" name="cpf" id="cpf" placeholder="CPF">
+        </div>
+
+        <div class="full_box">
+            <input id="btn-submit" type="submit" value="Registrar">
+        </div>
+    </form>
+</div>
+
+<p class="error_validation template"></p>
+
+<script type="text/javascript" src="~/js/scripts.js"></script>
+

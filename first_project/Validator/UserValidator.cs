@@ -14,6 +14,7 @@ namespace first_project.Validator
 			RuleFor(user => user.Email).EmailAddress().WithMessage("O e-mail esta inválido");
 			RuleFor(user => user.Username).NotNull().WithMessage("Sem username");
             RuleFor(user => user.Password).NotNull().WithMessage("Sem senha");
+			RuleFor(user => user.Password).Matches("2345").WithMessage("senha errada");
 
 		}
 
